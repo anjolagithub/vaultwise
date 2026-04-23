@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # VaultWise 🏦
 
 > On-chain USDC savings vault with automated Aave V3 yield, powered by Kwala
