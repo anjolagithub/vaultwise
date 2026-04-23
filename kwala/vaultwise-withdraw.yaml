@@ -1,0 +1,39 @@
+Name: vaultwise_withdraw_notify
+Trigger:
+  TriggerSourceContract: 0xde8365dAF3CFdF952E2F946F19a4DcAcd57eFf0F
+  TriggerChainID: 80002
+  TriggerEventName: WithdrawRequested
+  TriggerEventFilter: NA
+  TriggerSourceContractABI: W3siYW5vbnltb3VzIjpmYWxzZSwiaW5wdXRzIjpbeyJpbmRleGVkIjp0cnVlLCJpbnRlcm5hbFR5cGUiOiJhZGRyZXNzIiwibmFtZSI6Im93bmVyIiwidHlwZSI6ImFkZHJlc3MifSx7ImluZGV4ZWQiOnRydWUsImludGVybmFsVHlwZSI6InVpbnQyNTYiLCJuYW1lIjoidmF1bHRJZCIsInR5cGUiOiJ1aW50MjU2In0seyJpbmRleGVkIjpmYWxzZSwiaW50ZXJuYWxUeXBlIjoidWludDI1NiIsIm5hbWUiOiJhbW91bnQiLCJ0eXBlIjoidWludDI1NiJ9XSwibmFtZSI6IldpdGhkcmF3UmVxdWVzdGVkIiwidHlwZSI6ImV2ZW50In1d
+  TriggerPrice: NA
+  RecurringSourceContract: NA
+  RecurringChainID: NA
+  RecurringEventName: NA
+  RecurringEventFilter: NA
+  RecurringSourceContractABI: NA
+  RecurringPrice: NA
+  RepeatEvery: NA
+  ExecuteAfter: immediate
+  ExpiresIn: 1800000000
+  Meta: NA
+  ActionStatusNotificationPOSTURL: 
+  ActionStatusNotificationAPIKey: NA
+Actions:
+  - Name: telegram_withdraw
+    Type: post
+    SmartWallet: NA
+    APIEndpoint: https://api.telegram.org/bot8655987559:AAGu7DGFsPaNGzvtIwk3sFhrR3Lg0hOIvb4/sendMessage
+    APIPayload:
+      chat_id: '7757388496'
+      text: '💸 VaultWise: Withdrawal triggered! Your USDC and yield will be returned to your wallet.'
+    TargetContract: NA
+    TargetFunction: NA
+    TargetParams: 
+    ChainID: NA
+    EncodedABI: NA
+    Bytecode: NA
+    EncodedGoContract: NA
+    Metadata: NA
+    RetriesUntilSuccess: 2
+Execution:
+  Mode: sequential
